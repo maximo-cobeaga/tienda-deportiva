@@ -1,0 +1,33 @@
+@use '../base/variables' as v;
+
+.navBar{
+    background-color: v.$negro;
+    width: 100%;
+
+    .navBar__conteiner{
+        color: v.$blanco;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        justify-content: space-between;
+        padding: 0 5rem;
+
+        
+    }
+
+    a{
+        text-decoration: none;
+        color: v.$blanco;
+        border-right: 1px solid v.$blanco;
+        padding: 0.5rem 2rem;
+        &:last-of-type{
+            border-right: none;
+        }
+
+        &:hover{
+            border-radius: 5px;
+            background-color: v.$gris;
+        }
+    }
+    
+}

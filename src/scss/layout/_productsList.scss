@@ -1,0 +1,17 @@
+@use '../base/variables' as v;
+
+.productsList{
+    background-color: #DEF5E5;
+    padding: 2rem 0;
+    h2{
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .lista{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 2rem;
+    }
+}
