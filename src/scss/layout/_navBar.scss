@@ -20,9 +20,7 @@
         color: v.$blanco;
         border-right: 1px solid v.$blanco;
         padding: 0.5rem 2rem;
-        &:last-of-type{
-            border-right: none;
-        }
+        margin: .5rem;
 
         &:hover{
             border-radius: 5px;

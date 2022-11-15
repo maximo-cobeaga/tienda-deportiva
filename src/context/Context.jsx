@@ -12,8 +12,20 @@ export function ListContextProvider(props) {
   }, []);
 
 
+  const [count, setCount] = useState(0)
+  const [carrito, setCarrito] = useState([])
+  function addCart(id, title, img){
+    setCarrito({
+      id,
+      title,
+      img
+    })
+  }
+
+
+
   return (
-    <ListContext.Provider value={{products}}>
+    <ListContext.Provider value={{products, addCart, count, setCount, setCarrito, carrito}}>
       {props.children}
     </ListContext.Provider>
   )

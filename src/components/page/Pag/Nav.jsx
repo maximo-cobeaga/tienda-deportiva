@@ -1,6 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
+import { ListContext } from '../../../context/Context' 
+
 
 function Nav() {
+
+  const {count} = useContext(ListContext)
+
   return (
     <header className="navBar">
       <div className="navBar__conteiner">
@@ -8,10 +13,10 @@ function Nav() {
           Tienda <span>deportes</span>
         </h1>
 
-        <div>
+        <div className="enlaces">
           <a href="#">Productos</a>
           <a href="#">Contacto</a>
-          <a href="#">Carrito</a>
+          <button className="carrito-logo">Carrito {count > 0 && `${count}`}</button>
         </div>
       </div>
     </header>
